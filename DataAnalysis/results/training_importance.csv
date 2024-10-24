@@ -1,0 +1,35 @@
+,Feature,Importance
+25,"framework_NGC MXNet 23.09, NGC PyTorch 23.09, NGC HugeCTR 23.09",0.061468813998945826
+30,operating_system_Ubuntu 22.04,0.05371753344064189
+9,host_memory_capacity_2.0 TB,0.051706846291929294
+20,accelerator_interconnect_NVLINK Gen4 900 GB/s + NVSWITCH Gen3,0.04765371897689967
+21,accelerator_interconnect_NVLink Gen4 900GB/s,0.04719716924371992
+24,"framework_NGC MXNet 23.04, NGC Pytorch 23.04, NGC HugeCTR 23.04",0.04414077162934496
+12,host_storage_type_NVMe SSD,0.04388211822289155
+14,accelerators_per_node_8,0.0437601350981537
+27,"framework_NGC MXNet 24.04, NGC Pytorch 23.09, NGC Pytorch 24.04, NGC HugeCTR 24.04",0.042692592488674366
+6,host_processor_core_count_56,0.03936036960689145
+32,operating_system_Ubuntu 22.04.3 LTS,0.038187356135014665
+33,operating_system_Ubuntu 22.04.4 LTS,0.032986749521211806
+0,host_processor_model_name_AMD EPYC 9684X 96-Core Processor,0.03032556476879379
+22,accelerator_interconnect_PCIe 5.0,0.03022345232931048
+3,host_processor_model_name_Intel(R) Xeon(R) Platinum 8480+,0.02810033028139081
+13,accelerators_per_node_4,0.026784986661953055
+10,host_memory_capacity_2.3 TB,0.025656114586382017
+2,host_processor_model_name_Intel(R) Xeon(R) Platinum 8468,0.02451642333386114
+15,accelerator_model_name_NVIDIA H100-SXM5-80GB,0.024344092236331608
+7,host_processor_core_count_96,0.024218519052919985
+5,host_processor_core_count_48,0.02365095824220718
+8,host_memory_capacity_1536 GB,0.023108430506735125
+17,accelerator_memory_configuration_HBM2e,0.02088816181683122
+28,"framework_NVIDIA Release 24.04 MxNet, pytorch, dgl and 23.09 pytorch",0.019690858956837566
+1,host_processor_model_name_Intel(R) Xeon(R) Platinum 8452Y,0.019541552318504025
+16,accelerator_model_name_NVIDIA L40S,0.019009436477953796
+29,operating_system_Ubuntu 20.04.6 LTS,0.01870234544285879
+11,host_memory_capacity_256GB,0.017205433194254962
+18,accelerator_memory_configuration_HBM3,0.016189735925030348
+31,operating_system_Ubuntu 22.04.2 LTS,0.015052331060894226
+26,framework_NGC MXNet 24.04,0.014877825854771782
+4,host_processor_core_count_36,0.012231800669613475
+23,accelerator_interconnect_PCIe gen4 x16,0.011656781716377266
+19,accelerator_memory_capacity_80 GB,0.007270689911868244
