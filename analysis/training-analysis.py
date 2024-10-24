@@ -112,7 +112,7 @@ results_df = traverse_results(data_dir)
 df = cleanse_data_set(systems_df, results_df)
 importance_df = run_rf(df)
 
-df.to_csv('training_sytems_data.csv')
-importance_df.to_csv('training_importance.csv')
+df.to_csv('training-sytems-data.csv')
+importance_df.to_csv('training-importance.csv')
 
 print(importance_df)  
