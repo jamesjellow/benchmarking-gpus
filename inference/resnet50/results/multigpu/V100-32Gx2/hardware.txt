@@ -1,0 +1,37 @@
+System:
+  Kernel: 5.15.0-124-generic x86_64 bits: 64 compiler: gcc v: 11.4.0 Console: pty pts/0
+    Distro: Ubuntu 22.04.5 LTS (Jammy Jellyfish)
+Machine:
+  Type: Xen System: Xen product: HVM domU v: 4.7.6-6.3 serial: <superuser required>
+  Mobo: N/A model: N/A serial: N/A BIOS: Xen v: 4.7.6-6.3 date: 04/24/2018
+CPU:
+  Info: 16-core model: Intel Xeon Gold 6130 bits: 64 type: MCP arch: Skylake rev: 4 cache:
+    L1: 1024 KiB L2: 16 MiB L3: 352 MiB
+  Speed (MHz): avg: 2100 min/max: N/A cores: 1: 2100 2: 2100 3: 2100 4: 2100 5: 2100 6: 2100
+    7: 2100 8: 2100 9: 2100 10: 2100 11: 2100 12: 2100 13: 2100 14: 2100 15: 2100 16: 2100
+    bogomips: 67201
+  Flags: avx avx2 ht lm nx pae sse sse2 sse3 sse4_1 sse4_2 ssse3
+Graphics:
+  Device-1: vendor: XenSource driver: bochs-drm v: N/A bus-ID: 00:02.0
+  Device-2: NVIDIA GV100GL [Tesla V100 SXM2 32GB] driver: N/A bus-ID: 00:05.0
+  Device-3: NVIDIA GV100GL [Tesla V100 SXM2 32GB] driver: N/A bus-ID: 00:06.0
+  Display: server: No display server data found. Headless machine? tty: 179x23
+  Message: GL data unavailable in console. Try -G --display
+Audio:
+  Message: No device data found.
+Network:
+  Device-1: Intel 82371AB/EB/MB PIIX4 ACPI vendor: Red Hat Qemu virtual machine
+    type: network bridge driver: N/A port: N/A bus-ID: 00:01.3
+  IF-ID-1: eth0 state: up speed: N/A duplex: N/A mac: <filter>
+Drives:
+  Local Storage: total: 50 GiB used: 13.48 GiB (27.0%)
+Partition:
+  ID-1: / size: 47.38 GiB used: 13.36 GiB (28.2%) fs: ext4 dev: /dev/dm-0 mapped: ubuntu--vg-root
+  ID-2: /boot size: 1.69 GiB used: 124.4 MiB (7.2%) fs: ext4 dev: /dev/xvda2
+Swap:
+  Alert: No swap data was found.
+Sensors:
+  Message: No sensor data found. Is lm-sensors configured?
+Info:
+  Processes: 229 Uptime: 20m Memory: 58.85 GiB used: 1.15 GiB (2.0%) Init: systemd runlevel: 5
+  Compilers: gcc: 11.4.0 Packages: 759 Shell: sh inxi: 3.3.13

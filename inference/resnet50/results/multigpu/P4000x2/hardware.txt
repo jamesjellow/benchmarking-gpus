@@ -1,0 +1,37 @@
+System:
+  Kernel: 5.15.0-124-generic x86_64 bits: 64 compiler: gcc v: 11.4.0 Console: pty pts/0
+    Distro: Ubuntu 22.04.5 LTS (Jammy Jellyfish)
+Machine:
+  Type: Xen System: Xen product: HVM domU v: 4.13 serial: <superuser required>
+  Mobo: N/A model: N/A serial: N/A BIOS: Xen v: 4.13 date: 04/08/2022
+CPU:
+  Info: 16-core model: Intel Xeon E5-2623 v4 bits: 64 type: MCP arch: Broadwell rev: 1 cache:
+    L1: 1024 KiB L2: 4 MiB L3: 160 MiB
+  Speed (MHz): avg: 2600 min/max: N/A cores: 1: 2600 2: 2600 3: 2600 4: 2600 5: 2600 6: 2600
+    7: 2600 8: 2600 9: 2600 10: 2600 11: 2600 12: 2600 13: 2600 14: 2600 15: 2600 16: 2600
+    bogomips: 83200
+  Flags: avx avx2 ht lm nx pae sse sse2 sse3 sse4_1 sse4_2 ssse3
+Graphics:
+  Device-1: vendor: XenSource driver: bochs-drm v: N/A bus-ID: 00:02.0
+  Device-2: NVIDIA GP104GL [Quadro P4000] driver: N/A bus-ID: 00:05.0
+  Device-3: NVIDIA GP104GL [Quadro P4000] driver: N/A bus-ID: 00:06.0
+  Display: server: No display server data found. Headless machine? tty: 166x26
+  Message: GL data unavailable in console. Try -G --display
+Audio:
+  Message: No device data found.
+Network:
+  Device-1: Intel 82371AB/EB/MB PIIX4 ACPI vendor: Red Hat Qemu virtual machine
+    type: network bridge driver: N/A port: N/A bus-ID: 00:01.3
+  IF-ID-1: eth0 state: up speed: N/A duplex: N/A mac: <filter>
+Drives:
+  Local Storage: total: 50 GiB used: 13.44 GiB (26.9%)
+Partition:
+  ID-1: / size: 47.38 GiB used: 13.32 GiB (28.1%) fs: ext4 dev: /dev/dm-0 mapped: ubuntu--vg-root
+  ID-2: /boot size: 1.69 GiB used: 124.4 MiB (7.2%) fs: ext4 dev: /dev/xvda2
+Swap:
+  Alert: No swap data was found.
+Sensors:
+  Message: No sensor data found. Is lm-sensors configured?
+Info:
+  Processes: 225 Uptime: 13m Memory: 58.85 GiB used: 1.09 GiB (1.8%) Init: systemd runlevel: 5
+  Compilers: gcc: 11.4.0 Packages: 759 Shell: sh inxi: 3.3.13
