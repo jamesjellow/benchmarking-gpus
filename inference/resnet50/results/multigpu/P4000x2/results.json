@@ -1,0 +1,56 @@
+{
+    "TestScenario.SingleStream": {
+        "count": 2900,
+        "good_items": 0,
+        "mean": 0.20635126278318208,
+        "percentiles": {
+            "50.0": 0.19827115535736084,
+            "80.0": 0.2724210262298584,
+            "90.0": 0.31641333103179914,
+            "95.0": 0.3529983997344969,
+            "99.0": 0.43156141042709323,
+            "99.9": 0.5091521213054659
+        },
+        "qps": 4.829359028605656,
+        "took": 600.4937679767609,
+        "total_items": 2900
+    },
+    "args": {
+        "accuracy": false,
+        "audit_conf": "audit.config",
+        "backend": "onnxruntime",
+        "cache": 0,
+        "cache_dir": null,
+        "count": null,
+        "data_format": null,
+        "dataset": "imagenet",
+        "dataset_list": null,
+        "dataset_path": "/home/paperspace/inference/vision/classification_and_detection/fake_imagenet",
+        "debug": false,
+        "device": null,
+        "find_peak_performance": false,
+        "inputs": null,
+        "max_batchsize": 32,
+        "max_latency": null,
+        "model": "/home/paperspace/inference/vision/classification_and_detection/resnet50_v1.onnx",
+        "model_name": "resnet50",
+        "output": "/home/paperspace/inference/vision/classification_and_detection/output/onnxruntime-gpu/resnet50",
+        "outputs": [
+            "ArgMax:0"
+        ],
+        "performance_sample_count": null,
+        "preprocessed_dir": null,
+        "profile": "resnet50-onnxruntime",
+        "qps": null,
+        "samples_per_query": 8,
+        "scenario": "SingleStream",
+        "threads": 16,
+        "time": null,
+        "use_preprocessed_dataset": false,
+        "user_conf": "user.conf"
+    },
+    "cmdline": "Namespace(dataset='imagenet', dataset_path='/home/paperspace/inference/vision/classification_and_detection/fake_imagenet', dataset_list=None, data_format=None, profile='resnet50-onnxruntime', scenario='SingleStream', max_batchsize=32, model='/home/paperspace/inference/vision/classification_and_detection/resnet50_v1.onnx', output='/home/paperspace/inference/vision/classification_and_detection/output/onnxruntime-gpu/resnet50', inputs=None, outputs=['ArgMax:0'], backend='onnxruntime', device=None, model_name='resnet50', threads=16, qps=None, cache=0, cache_dir=None, preprocessed_dir=None, use_preprocessed_dataset=False, accuracy=False, find_peak_performance=False, debug=False, user_conf='user.conf', audit_conf='audit.config', time=None, count=None, performance_sample_count=None, max_latency=None, samples_per_query=8)",
+    "runtime": "onnxruntime",
+    "time": 1729827214,
+    "version": "1.19.2"
+}
