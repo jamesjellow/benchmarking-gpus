@@ -1,0 +1,59 @@
+================================================
+MLPerf Results Summary
+================================================
+SUT name : PySUT
+Scenario : SingleStream
+Mode     : PerformanceOnly
+90th percentile latency (ns) : 62876196
+Result is : VALID
+  Min duration satisfied : Yes
+  Min queries satisfied : Yes
+  Early stopping satisfied: Yes
+Early Stopping Result:
+ * Processed at least 64 queries (9990).
+ * Would discard 928 highest latency queries.
+ * Early stopping 90th percentile estimate: 63004364
+ * Early stopping 99th percentile estimate: 77291305
+
+================================================
+Additional Stats
+================================================
+QPS w/ loadgen overhead         : 16.65
+QPS w/o loadgen overhead        : 16.66
+
+Min latency (ns)                : 53719427
+Max latency (ns)                : 136769661
+Mean latency (ns)               : 60025060
+50.00 percentile latency (ns)   : 59502058
+90.00 percentile latency (ns)   : 62876196
+95.00 percentile latency (ns)   : 64607228
+97.00 percentile latency (ns)   : 66224912
+99.00 percentile latency (ns)   : 72054531
+99.90 percentile latency (ns)   : 110972617
+
+================================================
+Test Parameters Used
+================================================
+samples_per_query : 1
+target_qps : 100
+target_latency (ns): 0
+max_async_queries : 1
+min_duration (ms): 600000
+max_duration (ms): 0
+min_query_count : 100
+max_query_count : 0
+qsl_rng_seed : 3066443479025735752
+sample_index_rng_seed : 10688027786191513374
+schedule_rng_seed : 14962580496156340209
+accuracy_log_rng_seed : 0
+accuracy_log_probability : 0
+accuracy_log_sampling_target : 0
+print_timestamps : 0
+performance_issue_unique : 0
+performance_issue_same : 0
+performance_issue_same_index : 0
+performance_sample_count : 1024
+
+No warnings encountered during test.
+
+No errors encountered during test.

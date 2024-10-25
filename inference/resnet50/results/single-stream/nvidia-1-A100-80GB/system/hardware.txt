@@ -1,0 +1,42 @@
+System:
+  Kernel: 6.2.0-37-generic x86_64 bits: 64 compiler: N/A Console: pty pts/1
+    Distro: Ubuntu 22.04.5 LTS (Jammy Jellyfish)
+Machine:
+  Type: Xen System: Xen product: HVM domU v: 4.13 serial: <superuser required>
+  Mobo: N/A model: N/A serial: N/A BIOS: Xen v: 4.13 date: 04/11/2024
+CPU:
+  Info: 12-core model: Intel Xeon Gold 6342 bits: 64 type: MCP arch: Ice Lake rev: 6
+    cache: L1: 960 KiB L2: 15 MiB L3: 432 MiB
+  Speed (MHz): avg: 2801 min/max: N/A cores: 1: 2801 2: 2801 3: 2801 4: 2801 5: 2801
+    6: 2801 7: 2801 8: 2801 9: 2801 10: 2801 11: 2801 12: 2801 bogomips: 67215
+  Flags: avx avx2 ht lm nx pae sse sse2 sse3 sse4_1 sse4_2 ssse3
+Graphics:
+  Device-1: vendor: XenSource driver: bochs-drm v: N/A bus-ID: 00:02.0
+  Device-2: NVIDIA GA100 [A100 SXM4 80GB] driver: nvidia v: 535.129.03
+    bus-ID: 00:05.0
+  Display: server: X.org v: 1.21.1.4 with: Xwayland v: 22.1.1 driver: X:
+    loaded: nvidia gpu: bochs-drm tty: 90x23
+  Message: GL data unavailable in console. Try -G --display
+Audio:
+  Message: No device data found.
+  Sound Server-1: PulseAudio v: 15.99.1 running: yes
+  Sound Server-2: PipeWire v: 0.3.48 running: yes
+Network:
+  Device-1: Intel 82371AB/EB/MB PIIX4 ACPI vendor: Red Hat Qemu virtual machine
+    type: network bridge driver: N/A port: N/A bus-ID: 00:01.3
+  IF-ID-1: docker0 state: down mac: <filter>
+  IF-ID-2: eth0 state: up speed: N/A duplex: N/A mac: <filter>
+Drives:
+  Local Storage: total: 250 GiB used: 37.13 GiB (14.9%)
+Partition:
+  ID-1: / size: 244.23 GiB used: 36.91 GiB (15.1%) fs: ext4 dev: /dev/dm-0
+    mapped: ubuntu--vg-root
+  ID-2: /boot size: 1.69 GiB used: 226.3 MiB (13.1%) fs: ext4 dev: /dev/xvda2
+Swap:
+  Alert: No swap data was found.
+Sensors:
+  System Temperatures: cpu: N/A mobo: N/A gpu: nvidia temp: 29 C
+  Fan Speeds (RPM): N/A
+Info:
+  Processes: 305 Uptime: 8m Memory: 88.37 GiB used: 1.82 GiB (2.1%) Init: systemd
+  runlevel: 5 Compilers: gcc: 11.4.0 Packages: 2049 Shell: Bash v: 5.1.16 inxi: 3.3.13
