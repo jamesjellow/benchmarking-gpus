@@ -1,5 +1,10 @@
 #!/bin/bash
 
+
+# TODO: Modify paths to use $HOME variable instead of static path
+# TODO: See if we want to use this script as an entry point for other models ./setup-and-run.sh modelName for example
+# Comment: Move this script to the home directory of your machine to run it.
+
 sudo apt update && sudo apt upgrade
 sudo apt install python3 python3-pip python3-venv git wget curl
 python3 -m venv cm
