@@ -1,26 +1,3 @@
-{
-  "CM_HOST_CPU_WRITE_PROTECT_SUPPORT": "yes",
-  "CM_HOST_CPU_MICROCODE": "0x2006a08",
-  "CM_HOST_CPU_FPU_SUPPORT": "yes",
-  "CM_HOST_CPU_FPU_EXCEPTION_SUPPORT": "yes",
-  "CM_HOST_CPU_BUGS": "cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs taa itlb_multihit mmio_stale_data retbleed gds bhi",
-  "CM_HOST_CPU_TLB_SIZE": "Not Found",
-  "CM_HOST_CPU_CFLUSH_SIZE": "64",
-  "CM_HOST_CPU_ARCHITECTURE": "x86_64",
-  "CM_HOST_CPU_TOTAL_CORES": "8",
-  "CM_HOST_CPU_ON_LINE_CPUS_LIST": "0-7",
-  "CM_HOST_CPU_THREADS_PER_CORE": "1",
-  "CM_HOST_CPU_PHYSICAL_CORES_PER_SOCKET": "8",
-  "CM_HOST_CPU_SOCKETS": "1",
-  "CM_HOST_CPU_NUMA_NODES": "1",
-  "CM_HOST_CPU_VENDOR_ID": "GenuineIntel",
-  "CM_HOST_CPU_FAMILY": "6",
-  "CM_HOST_CPU_MODEL_NAME": "Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz",
-  "CM_HOST_CPU_L1D_CACHE_SIZE": "256 KiB",
-  "CM_HOST_CPU_L1I_CACHE_SIZE": "256 KiB",
-  "CM_HOST_CPU_L2_CACHE_SIZE": "8 MiB",
-  "CM_HOST_CPU_L3_CACHE_SIZE": "176 MiB",
-  "CM_HOST_CPU_TOTAL_LOGICAL_CORES": "8",
-  "CM_HOST_MEMORY_CAPACITY": "30G",
-  "CM_HOST_DISK_CAPACITY": "149G"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:af0b8dd018dbf1b68c8d0bc74147f1018125156e076a385b77dc9d52619ebea2
+size 1080

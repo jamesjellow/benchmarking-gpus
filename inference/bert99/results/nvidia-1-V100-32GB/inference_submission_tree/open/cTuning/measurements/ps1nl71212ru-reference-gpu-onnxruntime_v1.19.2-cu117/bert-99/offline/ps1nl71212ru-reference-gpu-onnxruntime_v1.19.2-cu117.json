@@ -1,7 +1,3 @@
-{
-  "starting_weights_filename": "https://armi.in/files/model.onnx",
-  "retraining": "no",
-  "input_data_types": "fp32",
-  "weight_data_types": "fp32",
-  "weight_transformations": "none"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7c45590aba43ac91c9afd05d3987c7860f4b1ee7435fe918ee4076567acbaa61
+size 188
