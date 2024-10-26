@@ -1,0 +1,45 @@
+System:
+  Kernel: 6.2.0-37-generic x86_64 bits: 64 compiler: N/A Console: pty pts/0
+    Distro: Ubuntu 22.04.3 LTS (Jammy Jellyfish)
+Machine:
+  Type: Xen System: Xen product: HVM domU v: 4.13 serial: <filter>
+  Mobo: N/A model: N/A serial: N/A BIOS: Xen v: 4.13 date: 11/17/2023
+CPU:
+  Info: 16-core model: Intel Xeon Platinum 8458P bits: 64 type: MCP
+    arch: Saphire Rapids rev: 8 cache: L1: 1.2 MiB L2: 32 MiB L3: 1.29 GiB
+  Speed (MHz): avg: 2700 min/max: N/A cores: 1: 2700 2: 2700 3: 2700
+    4: 2700 5: 2700 6: 2700 7: 2700 8: 2700 9: 2700 10: 2700 11: 2700 12: 2700
+    13: 2700 14: 2700 15: 2700 16: 2700 bogomips: 86403
+  Flags: avx avx2 ht lm nx pae sse sse2 sse3 sse4_1 sse4_2 ssse3
+Graphics:
+  Device-1: vendor: XenSource driver: bochs-drm v: N/A bus-ID: 00:02.0
+  Device-2: NVIDIA driver: nvidia v: 535.129.03 bus-ID: 00:05.0
+  Display: server: X.org v: 1.21.1.4 with: Xwayland v: 22.1.1 driver: X:
+    loaded: nvidia gpu: bochs-drm tty: 80x26
+  Message: GL data unavailable in console for root.
+Audio:
+  Message: No device data found.
+  Sound Server-1: PulseAudio v: 15.99.1 running: yes
+  Sound Server-2: PipeWire v: 0.3.48 running: yes
+Network:
+  Device-1: Intel 82371AB/EB/MB PIIX4 ACPI
+    vendor: Red Hat Qemu virtual machine type: network bridge driver: N/A
+    port: N/A bus-ID: 00:01.3
+  IF-ID-1: docker0 state: down mac: <filter>
+  IF-ID-2: eth0 state: up speed: N/A duplex: N/A mac: <filter>
+Drives:
+  Local Storage: total: 100 GiB used: 49.81 GiB (49.8%)
+Partition:
+  ID-1: / size: 96.58 GiB used: 49.59 GiB (51.3%) fs: ext4 dev: /dev/dm-0
+    mapped: ubuntu--vg-root
+  ID-2: /boot size: 1.69 GiB used: 231.9 MiB (13.4%) fs: ext4
+    dev: /dev/xvda2
+Swap:
+  Alert: No swap data was found.
+Sensors:
+  System Temperatures: cpu: N/A mobo: N/A gpu: nvidia temp: 28 C
+  Fan Speeds (RPM): N/A
+Info:
+  Processes: 344 Uptime: 14m Memory: 245.78 GiB used: 3.07 GiB (1.2%)
+  Init: systemd runlevel: 5 Compilers: gcc: 11.4.0 Packages: 2059 Shell: Bash
+  v: 5.1.16 inxi: 3.3.13

@@ -1,0 +1,37 @@
+System:
+  Kernel: 5.4.0-198-generic x86_64 bits: 64 compiler: gcc v: 9.4.0 
+  Console: N/A Distro: Ubuntu 20.04.6 LTS (Focal Fossa) 
+Machine:
+  Type: Xen System: Xen product: HVM domU v: 4.7.6-6.3 serial: <filter> 
+  Mobo: N/A model: N/A serial: N/A BIOS: Xen v: 4.7.6-6.3 date: 04/24/2018 
+CPU:
+  Topology: 8-Core model: Intel Xeon Gold 6130 bits: 64 type: MCP 
+  arch: Skylake rev: 4 L2 cache: 22.0 MiB 
+  flags: avx avx2 lm nx pae sse sse2 sse3 sse4_1 sse4_2 ssse3 
+  bogomips: 33600 
+  Speed: 2100 MHz min/max: N/A Core speeds (MHz): 1: 2100 2: 2100 3: 2100 
+  4: 2100 5: 2100 6: 2100 7: 2100 8: 2100 
+Graphics:
+  Device-1: vendor: XenSource driver: bochs-drm v: N/A bus ID: 00:02.0 
+  Device-2: NVIDIA GV100GL [Tesla V100 SXM2 32GB] driver: N/A 
+  bus ID: 00:05.0 
+  Display: server: X.org 1.20.13 driver: nvidia tty: 80x26 
+  Message: Advanced graphics data unavailable in console for root. 
+Audio:
+  Message: No Device data found. 
+Network:
+  Device-1: Intel 82371AB/EB/MB PIIX4 ACPI 
+  vendor: Red Hat Qemu virtual machine type: network bridge driver: N/A 
+  port: c200 bus ID: 00:01.3 
+  IF-ID-1: docker0 state: down mac: <filter> 
+  IF-ID-2: eth0 state: up speed: N/A duplex: N/A mac: <filter> 
+Drives:
+  Local Storage: total: 100.00 GiB used: 48.43 GiB (48.4%) 
+Partition:
+  ID-1: / size: 98.31 GiB used: 48.43 GiB (49.3%) fs: ext4 dev: /dev/dm-0 
+Sensors:
+  Message: No sensors data was found. Is sensors configured? 
+Info:
+  Processes: 248 Uptime: 7m Memory: 29.37 GiB used: 753.9 MiB (2.5%) 
+  Init: systemd runlevel: 5 Compilers: gcc: 9.4.0 Shell: bash v: 5.0.17 
+  inxi: 3.0.38 
