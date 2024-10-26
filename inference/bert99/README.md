@@ -1,4 +1,4 @@
-# HOW TO RUN RESET BENCHMARKS
+# HOW TO RUN BERT BENCHMARKS
 
 1. Spin up a new VM in paperspace and make sure you select "ML in a box" for the OS
 
@@ -11,7 +11,7 @@ sudo ubuntu-drivers install
 sudo reboot
 ```
 
-2. Install Setup tools
+3. Install Setup tools
 
 ```
 sudo apt update -y
@@ -19,7 +19,7 @@ sudo apt install -y python3 python3-pip python3-venv git git-lfs wget curl
 
 ```
 
-2. Install Cuda Toolkit
+4. Install Cuda Toolkit
 
 ```
 
@@ -37,7 +37,7 @@ sudo apt-get -y install cuda-toolkit-12-6
 
 ```
 
-2. Setup CM
+5. Setup CM
 
 ```
 python3 -m pip install cmind -U
@@ -47,7 +47,7 @@ cm init
 cm test core
 ```
 
-2. Update environment
+6. Update environment
 
 ```
 
@@ -57,7 +57,7 @@ source ~/.bashrc
 
 ```
 
-2. Install cuDNN
+7. Install cuDNN
 
 ```
 #Ubuntu 22
@@ -73,7 +73,7 @@ sudo apt-get update
 sudo apt-get -y install cudnn
 ```
 
-2. Install TensorRT
+8. Install TensorRT
 
 ```
 
@@ -82,7 +82,7 @@ sudo apt install tensorrt
 
 ```
 
-3. Run a quick test to make sure there are no red warnings:
+9. Run a quick test to make sure there are no red warnings:
 
 ```
 cm run script --tags=generate-run-cmds,inference,\_find-performance,\_all-scenarios \
@@ -92,18 +92,18 @@ cm run script --tags=generate-run-cmds,inference,\_find-performance,\_all-scenar
 
 ```
 
-4. Run the benchmarks (This could take a an hour or more depending on your machine)
+10. Run the benchmarks (This could take a an hour or more depending on your machine)
 
-   a. Do a full accuracy run for all the scenarios
-   b. Do a full performance run for all the scenarios
-   c. Populate the README files
-   d. Generate MLPerf submission tree
+a. Do a full accuracy run for all the scenarios
+b. Do a full performance run for all the scenarios
+c. Populate the README files
+d. Generate MLPerf submission tree
 
 For step D, take out the last two commands `--hw_notes_extra="Result taken by <YOUR NAME>" --quiet`
 
-5. The submission result will be stored in `inference_submission_tree/`
+11. The submission result will be stored in `inference_submission_tree/`
 
-6. Grab that submission, scp it from your machine to your machine. Create a pull request.
+12. Grab that submission, scp it from your machine to your machine. Create a pull request.
 
 ```
 
