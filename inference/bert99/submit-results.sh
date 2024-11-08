@@ -7,5 +7,5 @@ sudo ./aws/install
 
 # TODO: put all results into a dir to submit to s3
 
-# aws sync aws s3 sync ${YOUR_RESULTS_DIR}  s3://benchmarking-gpus/inference/bert99/results/${YOUR_RESULTS_DIR}
+# aws s3 sync ${YOUR_RESULTS_DIR}  s3://benchmarking-gpus/inference/bert99/results/${YOUR_RESULTS_DIR}
 # echo submission complete!
