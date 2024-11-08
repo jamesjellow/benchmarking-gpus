@@ -1,10 +1,18 @@
 # HOW TO RUN BERT BENCHMARKS
 
+## Prerequisites
+
 1. Spin up a new VM in paperspace and make sure you select "Ubuntu 22" for the OS
 
 2. SSH into your machine and install drivers
 
 ```sh
+# Grab compatible drivers
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb
+sudo dpkg -i cuda-keyring_1.1-1_all.deb
+sudo apt-get update
+
+# Install drivers and update machine
 sudo apt update
 ubuntu-drivers devices
 sudo ubuntu-drivers install
@@ -34,7 +42,8 @@ For step D, take out the last two commands `--hw_notes_extra="Result taken by <Y
 
 6. The submission result will be stored in `inference_submission_tree/`
 
-7. Grab that submission, scp it from your machine to your machine. Create a pull request.
+7. Grab your linux aws credentials from https://uillinoisedu.sharepoint.com/:t:/s/CS598ResearchGroup79/EeGvJadKOgFBov5_1lE8AfQBDRLlrbJpzwLi6Kyxl3oudg?e=oL85da . Then run the `sh submit-results.sh` script to submit your results.
+
 
 ```sh
 scp -r paperspace@<IP>:/home/paperspace/inference_submission_tree/ .
