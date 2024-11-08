@@ -40,9 +40,14 @@ d. Generate MLPerf submission tree
 
 For step D, take out the last two commands `--hw_notes_extra="Result taken by <YOUR NAME>" --quiet`
 
-6. The submission result will be stored in `inference_submission_tree/`
+6. Run the dump your hardware info script located in the /inference directory
+```sh
+sh dump-hardware-info.sh
+```
 
-7. Grab your linux aws credentials from https://uillinoisedu.sharepoint.com/:t:/s/CS598ResearchGroup79/EeGvJadKOgFBov5_1lE8AfQBDRLlrbJpzwLi6Kyxl3oudg?e=oL85da . Then run the `sh submit-results.sh` script to submit your results.
+7. The submission result will be stored in `inference_submission_tree/`
+
+8. Grab your linux aws credentials from https://uillinoisedu.sharepoint.com/:t:/s/CS598ResearchGroup79/EeGvJadKOgFBov5_1lE8AfQBDRLlrbJpzwLi6Kyxl3oudg?e=oL85da . Then run the `sh submit-results.sh` script to submit your results.
 
 
 ```sh
