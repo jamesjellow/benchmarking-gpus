@@ -1,0 +1,488 @@
+{
+    "cpu": {
+        "accuracy": {
+            "cpu_0": {
+                "min": 0.0,
+                "max": 100.0,
+                "mean": 19.15700824175824,
+                "percentile_50": 16.16,
+                "percentile_90": 37.62,
+                "percentile_95": 40.59,
+                "percentile_97": 46.53,
+                "percentile_99": 99.01,
+                "percentile_99_9": 100.0
+            },
+            "cpu_1": {
+                "min": 0.0,
+                "max": 100.0,
+                "mean": 19.956403846153844,
+                "percentile_50": 14.0,
+                "percentile_90": 39.0,
+                "percentile_95": 98.99,
+                "percentile_97": 100.0,
+                "percentile_99": 100.0,
+                "percentile_99_9": 100.0
+            },
+            "cpu_2": {
+                "min": 0.0,
+                "max": 100.0,
+                "mean": 25.17378846153846,
+                "percentile_50": 15.15,
+                "percentile_90": 98.99,
+                "percentile_95": 100.0,
+                "percentile_97": 100.0,
+                "percentile_99": 100.0,
+                "percentile_99_9": 100.0
+            },
+            "cpu_3": {
+                "min": 0.0,
+                "max": 100.0,
+                "mean": 18.938052197802197,
+                "percentile_50": 12.0,
+                "percentile_90": 39.39,
+                "percentile_95": 98.99,
+                "percentile_97": 99.0,
+                "percentile_99": 100.0,
+                "percentile_99_9": 100.0
+            },
+            "cpu_4": {
+                "min": 0.0,
+                "max": 100.0,
+                "mean": 13.58393956043956,
+                "percentile_50": 8.08,
+                "percentile_90": 34.0,
+                "percentile_95": 40.4,
+                "percentile_97": 49.4983,
+                "percentile_99": 99.0161,
+                "percentile_99_9": 100.0
+            },
+            "cpu_5": {
+                "min": 0.0,
+                "max": 100.0,
+                "mean": 11.997239010989011,
+                "percentile_50": 6.0,
+                "percentile_90": 33.33,
+                "percentile_95": 38.38,
+                "percentile_97": 42.92689999999997,
+                "percentile_99": 52.833800000000075,
+                "percentile_99_9": 100.0
+            },
+            "cpu_6": {
+                "min": 0.0,
+                "max": 100.0,
+                "mean": 13.281478021978023,
+                "percentile_50": 8.0,
+                "percentile_90": 35.0,
+                "percentile_95": 38.0,
+                "percentile_97": 41.41,
+                "percentile_99": 62.660000000000764,
+                "percentile_99_9": 100.0
+            },
+            "cpu_7": {
+                "min": 0.0,
+                "max": 100.0,
+                "mean": 30.520535714285714,
+                "percentile_50": 17.17,
+                "percentile_90": 99.01,
+                "percentile_95": 100.0,
+                "percentile_97": 100.0,
+                "percentile_99": 100.0,
+                "percentile_99_9": 100.0
+            },
+            "cpu_all": {
+                "min": 3.38,
+                "max": 41.99,
+                "mean": 19.097579670329672,
+                "percentile_50": 12.67,
+                "percentile_90": 31.663999999999998,
+                "percentile_95": 33.46199999999999,
+                "percentile_97": 34.5,
+                "percentile_99": 36.36270000000001,
+                "percentile_99_9": 40.91357000000012
+            }
+        },
+        "performance": {
+            "cpu_0": {
+                "min": 0.0,
+                "max": 100.0,
+                "mean": 19.1371189279732,
+                "percentile_50": 12.305,
+                "percentile_90": 40.59,
+                "percentile_95": 98.99,
+                "percentile_97": 99.01,
+                "percentile_99": 100.0,
+                "percentile_99_9": 100.0
+            },
+            "cpu_1": {
+                "min": 0.0,
+                "max": 100.0,
+                "mean": 30.424815745393637,
+                "percentile_50": 16.08,
+                "percentile_90": 99.01,
+                "percentile_95": 100.0,
+                "percentile_97": 100.0,
+                "percentile_99": 100.0,
+                "percentile_99_9": 100.0
+            },
+            "cpu_2": {
+                "min": 0.0,
+                "max": 100.0,
+                "mean": 16.759154103852598,
+                "percentile_50": 12.87,
+                "percentile_90": 36.0,
+                "percentile_95": 44.401500000000006,
+                "percentile_97": 53.10329999999981,
+                "percentile_99": 99.01,
+                "percentile_99_9": 100.0
+            },
+            "cpu_3": {
+                "min": 0.0,
+                "max": 100.0,
+                "mean": 30.578479899497488,
+                "percentile_50": 20.0,
+                "percentile_90": 99.0,
+                "percentile_95": 100.0,
+                "percentile_97": 100.0,
+                "percentile_99": 100.0,
+                "percentile_99_9": 100.0
+            },
+            "cpu_4": {
+                "min": 0.0,
+                "max": 99.0,
+                "mean": 20.423890284757118,
+                "percentile_50": 20.1,
+                "percentile_90": 37.37,
+                "percentile_95": 41.0,
+                "percentile_97": 45.0,
+                "percentile_99": 52.0052,
+                "percentile_99_9": 92.41330000000117
+            },
+            "cpu_5": {
+                "min": 0.0,
+                "max": 100.0,
+                "mean": 25.19897403685092,
+                "percentile_50": 21.43,
+                "percentile_90": 40.87400000000003,
+                "percentile_95": 98.65750000000008,
+                "percentile_97": 99.01,
+                "percentile_99": 100.0,
+                "percentile_99_9": 100.0
+            },
+            "cpu_6": {
+                "min": 0.0,
+                "max": 100.0,
+                "mean": 29.136951423785593,
+                "percentile_50": 18.37,
+                "percentile_90": 99.0,
+                "percentile_95": 100.0,
+                "percentile_97": 100.0,
+                "percentile_99": 100.0,
+                "percentile_99_9": 100.0
+            },
+            "cpu_7": {
+                "min": 0.0,
+                "max": 100.0,
+                "mean": 20.387093802345056,
+                "percentile_50": 14.0,
+                "percentile_90": 41.0,
+                "percentile_95": 98.99,
+                "percentile_97": 99.0,
+                "percentile_99": 100.0,
+                "percentile_99_9": 100.0
+            },
+            "cpu_all": {
+                "min": 3.0,
+                "max": 42.88,
+                "mean": 24.031344221105527,
+                "percentile_50": 27.62,
+                "percentile_90": 32.67,
+                "percentile_95": 34.0865,
+                "percentile_97": 35.05949999999999,
+                "percentile_99": 37.1265,
+                "percentile_99_9": 40.91278000000059
+            }
+        }
+    },
+    "gpu": {
+        "accuracy": {
+            "GPU usage (%)": {
+                "min": 0.0,
+                "max": 100.0,
+                "mean": 96.36813186813187,
+                "percentile_50": 99.0,
+                "percentile_90": 100.0,
+                "percentile_95": 100.0,
+                "percentile_97": 100.0,
+                "percentile_99": 100.0,
+                "percentile_99_9": 100.0
+            },
+            "GPU memory usage (%)": {
+                "min": 2.0,
+                "max": 26.0,
+                "mean": 24.570604395604395,
+                "percentile_50": 25.0,
+                "percentile_90": 25.0,
+                "percentile_95": 25.0,
+                "percentile_97": 26.0,
+                "percentile_99": 26.0,
+                "percentile_99_9": 26.0
+            },
+            "GPU memory used (MiB)": {
+                "min": 218.0,
+                "max": 3437.0,
+                "mean": 2899.916758241758,
+                "percentile_50": 2537.0,
+                "percentile_90": 3437.0,
+                "percentile_95": 3437.0,
+                "percentile_97": 3437.0,
+                "percentile_99": 3437.0,
+                "percentile_99_9": 3437.0
+            },
+            "GPU memory total (MiB)": {
+                "min": 8192.0,
+                "max": 8192.0,
+                "mean": 8192.0,
+                "percentile_50": 8192.0,
+                "percentile_90": 8192.0,
+                "percentile_95": 8192.0,
+                "percentile_97": 8192.0,
+                "percentile_99": 8192.0,
+                "percentile_99_9": 8192.0
+            }
+        },
+        "performance": {
+            "GPU usage (%)": {
+                "min": 0.0,
+                "max": 100.0,
+                "mean": 98.48994974874371,
+                "percentile_50": 100.0,
+                "percentile_90": 100.0,
+                "percentile_95": 100.0,
+                "percentile_97": 100.0,
+                "percentile_99": 100.0,
+                "percentile_99_9": 100.0
+            },
+            "GPU memory usage (%)": {
+                "min": 2.0,
+                "max": 26.0,
+                "mean": 24.860552763819097,
+                "percentile_50": 25.0,
+                "percentile_90": 26.0,
+                "percentile_95": 26.0,
+                "percentile_97": 26.0,
+                "percentile_99": 26.0,
+                "percentile_99_9": 26.0
+            },
+            "GPU memory used (MiB)": {
+                "min": 218.0,
+                "max": 3462.0,
+                "mean": 3193.0632328308207,
+                "percentile_50": 3462.0,
+                "percentile_90": 3462.0,
+                "percentile_95": 3462.0,
+                "percentile_97": 3462.0,
+                "percentile_99": 3462.0,
+                "percentile_99_9": 3462.0
+            },
+            "GPU memory total (MiB)": {
+                "min": 8192.0,
+                "max": 8192.0,
+                "mean": 8192.0,
+                "percentile_50": 8192.0,
+                "percentile_90": 8192.0,
+                "percentile_95": 8192.0,
+                "percentile_97": 8192.0,
+                "percentile_99": 8192.0,
+                "percentile_99_9": 8192.0
+            }
+        }
+    },
+    "memory": {
+        "accuracy": {
+            "free, RAM available (KB)": {
+                "min": 13453544.0,
+                "max": 17060220.0,
+                "mean": 14351248.147252748,
+                "percentile_50": 14330998.0,
+                "percentile_90": 14496333.6,
+                "percentile_95": 14517054.8,
+                "percentile_97": 14528067.12,
+                "percentile_99": 15729635.08,
+                "percentile_99_9": 16950566.900000017
+            },
+            "cache, RAM cache usage (KB)": {
+                "min": 11848344.0,
+                "max": 12234340.0,
+                "mean": 12046922.897802198,
+                "percentile_50": 12045690.0,
+                "percentile_90": 12200350.4,
+                "percentile_95": 12219661.8,
+                "percentile_97": 12227474.32,
+                "percentile_99": 12230404.0,
+                "percentile_99_9": 12233945.544
+            },
+            "buff, RAM buffer usage (KB) ": {
+                "min": 498676.0,
+                "max": 502864.0,
+                "mean": 500896.3395604396,
+                "percentile_50": 500932.0,
+                "percentile_90": 502536.0,
+                "percentile_95": 502708.0,
+                "percentile_97": 502760.0,
+                "percentile_99": 502832.0,
+                "percentile_99_9": 502864.0
+            },
+            "si, swap-in rate from disk to RAM (KB/s)": {
+                "min": 0.0,
+                "max": 0.0,
+                "mean": 0.0,
+                "percentile_50": 0.0,
+                "percentile_90": 0.0,
+                "percentile_95": 0.0,
+                "percentile_97": 0.0,
+                "percentile_99": 0.0,
+                "percentile_99_9": 0.0
+            },
+            "so, swap-out rate from RAM to disk (KB/s)": {
+                "min": 0.0,
+                "max": 0.0,
+                "mean": 0.0,
+                "percentile_50": 0.0,
+                "percentile_90": 0.0,
+                "percentile_95": 0.0,
+                "percentile_97": 0.0,
+                "percentile_99": 0.0,
+                "percentile_99_9": 0.0
+            },
+            "bi, disk block reading frequency (blocks/s)": {
+                "min": 0.0,
+                "max": 787.0,
+                "mean": 12.987362637362637,
+                "percentile_50": 0.0,
+                "percentile_90": 0.0,
+                "percentile_95": 0.0,
+                "percentile_97": 0.0,
+                "percentile_99": 787.0,
+                "percentile_99_9": 787.0
+            }
+        },
+        "performance": {
+            "free, RAM available (KB)": {
+                "min": 13234340.0,
+                "max": 16652528.0,
+                "mean": 14052902.921273032,
+                "percentile_50": 14035968.0,
+                "percentile_90": 14108374.4,
+                "percentile_95": 14116548.8,
+                "percentile_97": 14120541.12,
+                "percentile_99": 14142000.6,
+                "percentile_99_9": 16583857.596000003
+            },
+            "cache, RAM cache usage (KB)": {
+                "min": 12229204.0,
+                "max": 12396184.0,
+                "mean": 12315779.130653266,
+                "percentile_50": 12315800.0,
+                "percentile_90": 12380166.0,
+                "percentile_95": 12388311.0,
+                "percentile_97": 12391389.44,
+                "percentile_99": 12394573.04,
+                "percentile_99_9": 12395986.452
+            },
+            "buff, RAM buffer usage (KB) ": {
+                "min": 502864.0,
+                "max": 505220.0,
+                "mean": 504008.96147403686,
+                "percentile_50": 503992.0,
+                "percentile_90": 504964.0,
+                "percentile_95": 505105.2,
+                "percentile_97": 505164.0,
+                "percentile_99": 505212.0,
+                "percentile_99_9": 505220.0
+            },
+            "si, swap-in rate from disk to RAM (KB/s)": {
+                "min": 0.0,
+                "max": 0.0,
+                "mean": 0.0,
+                "percentile_50": 0.0,
+                "percentile_90": 0.0,
+                "percentile_95": 0.0,
+                "percentile_97": 0.0,
+                "percentile_99": 0.0,
+                "percentile_99_9": 0.0
+            },
+            "so, swap-out rate from RAM to disk (KB/s)": {
+                "min": 0.0,
+                "max": 0.0,
+                "mean": 0.0,
+                "percentile_50": 0.0,
+                "percentile_90": 0.0,
+                "percentile_95": 0.0,
+                "percentile_97": 0.0,
+                "percentile_99": 0.0,
+                "percentile_99_9": 0.0
+            },
+            "bi, disk block reading frequency (blocks/s)": {
+                "min": 0.0,
+                "max": 787.0,
+                "mean": 13.1892797319933,
+                "percentile_50": 0.0,
+                "percentile_90": 0.0,
+                "percentile_95": 0.0,
+                "percentile_97": 0.0,
+                "percentile_99": 787.0,
+                "percentile_99_9": 787.0
+            }
+        }
+    },
+    "disk": {
+        "accuracy": {
+            "dm-0": {
+                "min": 0.0,
+                "max": 5.2,
+                "mean": 0.21938478439989012,
+                "percentile_50": 0.0,
+                "percentile_90": 0.8,
+                "percentile_95": 0.8,
+                "percentile_97": 1.2,
+                "percentile_99": 2.0,
+                "percentile_99_9": 2.5440000000002327
+            },
+            "xvda": {
+                "min": 0.0,
+                "max": 20.0,
+                "mean": 0.2634660807470475,
+                "percentile_50": 0.0,
+                "percentile_90": 0.8,
+                "percentile_95": 1.2,
+                "percentile_97": 1.6,
+                "percentile_99": 2.0,
+                "percentile_99_9": 6.928000000002794
+            }
+        },
+        "performance": {
+            "dm-0": {
+                "min": 0.0,
+                "max": 2.4,
+                "mean": 0.1841900376726664,
+                "percentile_50": 0.0,
+                "percentile_90": 0.8,
+                "percentile_95": 0.8,
+                "percentile_97": 1.2,
+                "percentile_99": 1.6,
+                "percentile_99_9": 2.0
+            },
+            "xvda": {
+                "min": 0.0,
+                "max": 4.0,
+                "mean": 0.21470071159480958,
+                "percentile_50": 0.0,
+                "percentile_90": 0.8,
+                "percentile_95": 1.2,
+                "percentile_97": 1.6,
+                "percentile_99": 2.0,
+                "percentile_99_9": 2.4
+            }
+        }
+    }
+}
