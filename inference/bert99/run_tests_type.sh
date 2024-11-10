@@ -26,10 +26,16 @@ MEMORY_LOG_PID=$!
 
 # Run the MLCommons benchmark - $TEST_TYPE (accuracy or performance)
 echo "Running MLCommons benchmark for run $NEXT_RUN_NUM..."
-cm run script --tags=generate-run-cmds,inference,_"$TEST_TYPE"-only,_all-scenarios \
-    --adr.python.name=mlperf-cuda --model=bert-99 --device=cuda \
-    --implementation=reference --backend=onnxruntime --quiet \
-    --execution-mode=valid --results_dir="$RESULTS_DIR"
+cm run script --tags=generate-run-cmds,inference,_"$TEST_TYPE"-only \
+    --device=cuda \
+    --model=bert-99 \
+    --implementation=reference \
+    --backend=onnxruntime \
+    --scenario=Offline \
+    --execution-mode=valid \
+    --adr.python.name=mlperf-cuda \
+    --quiet \
+    --results_dir="$RESULTS_DIR"
 
 echo "Benchmark completed. Stopping $TEST_TYPE metrics logging for run $NEXT_RUN_NUM..."
 
