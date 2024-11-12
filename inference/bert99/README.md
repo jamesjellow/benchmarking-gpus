@@ -4,7 +4,12 @@
 
 1. Spin up a new VM in paperspace and make sure you select "Ubuntu 22" for the OS
 
-2. SSH into your machine and install drivers
+2. Clone the repository into your home directory
+```sh
+git clone git@github.com:jamesjellow/benchmarking-gpus.git 
+```
+
+3. SSH into your machine and install drivers
 
 ```sh
 # Grab compatible drivers
@@ -19,41 +24,45 @@ sudo ubuntu-drivers install
 sudo reboot
 ```
 
-3. Copy the `setup.sh` script to your machine and run it.
+4. Move all the scripts to your home directory
+```sh
+cp benchmarking-gpus/inference/bert99/*.sh benchmarking-gpus/inference/bert99/*.py benchmarking-gpus/inference/dump-hardware-info.sh .
 
-4. Run a quick test to make sure there are no red warnings:
+```
+
+5. Make all the scripts executable and change the ownership
+```sh
+chmod +x *.sh
+sudo chown $USER:$USER -R .
+```
+
+6. Run the setup script
+```sh
+./setup.sh
+```
+
+7. Run a quick test to make sure there are no red warnings:
 
 ```sh
+source cm/bin/activate
 cm run script --tags=generate-run-cmds,inference,\_find-performance,\_all-scenarios \
  --adr.python.name=mlperf-cuda --model=bert-99 --implementation=reference \
  --device=cuda --backend=onnxruntime --quiet
 ```
 
-5. Run the benchmarks (This could take a an hour or more depending on your machine)
-
-https://github.com/mlcommons/ck/blob/master/cm-mlops/project/mlperf-inference-v3.0-submissions/docs/crowd-benchmark-mlperf-bert-inference-cuda.md
-
-a. Do a full accuracy run for all the scenarios
-b. Do a full performance run for all the scenarios
-c. Populate the README files
-d. Generate MLPerf submission tree
-
-For step D, take out the last two commands `--hw_notes_extra="Result taken by <YOUR NAME>" --quiet`
-
-6. Run the dump your hardware info script located in the /inference directory
+8. Run the dump your hardware info script
 ```sh
-sh dump-hardware-info.sh
+./dump-hardware-info.sh
 ```
 
-7. The submission result will be stored in `inference_submission_tree/`
-
-8. Grab your linux aws credentials from https://uillinoisedu.sharepoint.com/:t:/s/CS598ResearchGroup79/EeGvJadKOgFBov5_1lE8AfQBDRLlrbJpzwLi6Kyxl3oudg?e=oL85da . Then run the `sh submit-results.sh` script to submit your results.
-
-
+9. Run the benchmarks (This could take a couple hours or more depending on your machine)
 ```sh
-scp -r paperspace@<IP>:/home/paperspace/inference_submission_tree/ .
+for i in {1..9}; do 
+./run_tests.sh; 
+done
 ```
 
-Issues?
-Web UI to create your own cm CLI commands:
-https://access.cknowledge.org/playground/?action=howtorun
+10. Grab your linux aws credentials from https://uillinoisedu.sharepoint.com/:t:/s/CS598ResearchGroup79/EeGvJadKOgFBov5_1lE8AfQBDRLlrbJpzwLi6Kyxl3oudg?e=oL85da . Then run the `sh submit-results.sh` script to submit your results.
+```sh
+./submit-results.sh
+```

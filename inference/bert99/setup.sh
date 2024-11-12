@@ -15,11 +15,9 @@ export LD_LIBRARY_PATH=/usr/local/cuda-12.6/lib64:\$LD_LIBRARY_PATH
 source ~/.bashrc
 
 # Setup cudnn Ubuntu 22
-sudo apt-get update
-sudo apt-get -y install cudnn
+sudo apt-get -y install cudnn-cuda-12
 
 # Install TensorRT
-sudo apt update
 sudo apt install tensorrt -y
     
 
