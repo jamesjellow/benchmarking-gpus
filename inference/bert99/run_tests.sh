@@ -3,7 +3,7 @@
 #MOVE SCRIPT TO HOME DIRECTORY
 #MOVE SCRIPT TO HOME DIRECTORY
 
-source cm/bin/activate
+source ${HOME}/cm/bin/activate
 
 # Function to check if a package is installed and install it if missing
 check_and_install_sysstat() {
@@ -93,17 +93,20 @@ RUN_DIR="${BASE_RUN_DIR}_${NEXT_RUN_NUM}"
 mkdir -p "$HOME/runs/$RUN_DIR"/{measurements,profiling,results/{accuracy,performance},systems}
 
 # package this run into runs directory
-cp -r "${SUBMISSION_PROFILING_DIR}" "$HOME/runs/${RUN_DIR}/profiling"
-cp -r "${SUBMISSION_SYSTEMS_DIR}" "$HOME/runs/${RUN_DIR}/systems"
+# cp -r "${SUBMISSION_PROFILING_DIR}" "$HOME/runs/${RUN_DIR}/profiling" # profiling here is redundant
+cp -r "${SUBMISSION_PROFILING_DIR}" "$HOME/runs/${RUN_DIR}" # use this for profiling
+# cp -r "${SUBMISSION_SYSTEMS_DIR}" "$HOME/runs/${RUN_DIR}/systems" # systems here is redundant
+cp -r "${SUBMISSION_SYSTEMS_DIR}" "$HOME/runs/${RUN_DIR}" # use this for systems
 
 if [ -n "${SUBMISSION_MEASUREMENTS_DIR}" ]; then
-    cp -r "${SUBMISSION_MEASUREMENTS_DIR}" "$HOME/runs/${RUN_DIR}/measurements"
+    cp -r "${SUBMISSION_MEASUREMENTS_DIR}" "$HOME/runs/${RUN_DIR}/measurements" # offline directory is kept here, maybe remove?
 fi
 
 if [ -n "${SUBMISSION_ACCURACY_DIR}" ]; then
-    cp -r "${SUBMISSION_ACCURACY_DIR}" "$HOME/runs/${RUN_DIR}/results/accuracy"
+    # cp -r "${SUBMISSION_ACCURACY_DIR}" "$HOME/runs/${RUN_DIR}/results/accuracy" # accuracy here is redundant
+    cp -r "${SUBMISSION_ACCURACY_DIR}" "$HOME/runs/${RUN_DIR}/results" # use this for accuracy
 fi
 
 if [ -n "${SUBMISSION_PERFORMANCE_DIR}" ]; then
-    cp -r "${SUBMISSION_PERFORMANCE_DIR}" "$HOME/runs/${RUN_DIR}/results/performance"
+    cp -r "${SUBMISSION_PERFORMANCE_DIR}" "$HOME/runs/${RUN_DIR}/results/performance" # run_1 is kept here, maybe remove
 fi
