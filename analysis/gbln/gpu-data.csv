@@ -1,0 +1,7 @@
+accelerator_model_name,micro_architecture,core,core_clock,cuda_cores,base_clock,max_boost_clock,bus_type,bus_width,bus_size,bus_clock,bus_bandwidth,half_precision,single_precision,double_precision,cuda_compute_capability,tdp,form_factor,system_name
+NVIDIA H100 80GB HBM3,Hopper,1× GH100[49],,16896,1065,,HBM3,5120,80,1500,3352,989.43,66.9,33.5,9,700,SXMcard,pstnxy0z8y4x
+Tesla P4,Pascal,1× GP104,,2560,810,1063,GDDR5,256,8,6000,192,,,,6.1,50,PCIecard,instance_20241112_193018
+Quadro M4000,Maxwell,GM204-850,773,1664,,,256-bit GDDR5,,8.192,,206.47251,,,,5.2,120,NA,psofapjuebi4
+Tesla V100-SXM2-32GB,Volta,1× GV100-895-A1,,5120,,1455,HBM2,4096,32,1750,900,119.192,14.899,7.45,7,300,SXMcard,psl51p4dbdew
+NVIDIA A100-SXM4-80GB,Ampere,1× GA100-883AA-A1,,6912,765,1410,HBM2,5120,80,1215,1555,312,19.5,9.7,8,250,PCIe card (dual-slot),ps8ki3tepdr5
+NVIDIA L4,Ada Lovelace,1x AD104[55],,7424,795,2040,GDDR6,192,24,1563,300,121,30.3,0.49,8.9,72,HHHL single slot PCIe card,instance_20241113_194858

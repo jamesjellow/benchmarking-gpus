@@ -3,14 +3,19 @@ import json
 import pandas as pd  
 pd.options.mode.chained_assignment = None
 
+import numpy as np
+
 from sklearn.model_selection import train_test_split  
 from sklearn.ensemble import RandomForestClassifier  
-from sklearn.metrics import accuracy_score, classification_report  
+from sklearn.tree import DecisionTreeRegressor  
+from sklearn.metrics import accuracy_score, mean_squared_error, confusion_matrix
+
+from category_encoders import TargetEncoder
 
 from category_encoders import OneHotEncoder  #we could look into tweaking this
 
-data_dir = '../../../inference_results_v4.1'
-model_to_eval = 'resnet50'
+data_dir = '/LocalDev/cs598/inference_results_v4.1'
+model_to_eval = 'bert-99'
 
 def traverse_systems(root_dir):  
     print("Gathering systems data")
@@ -42,31 +47,36 @@ def traverse_results(root_dir):
                 if file == 'mlperf_log_summary.txt':  
                     result_file = {}
                     file_path = os.path.join(dirpath, file)
-                    latency_ns = parse_results(file_path)
+                    samples_ps, latency_ns = parse_results(file_path)
                     dir_path = dirpath.split('\\')
                     result_file['system'] = dir_path[4]
                     result_file['model'] = dir_path[5]
                     result_file['division'] = dir_path[6]
                     result_file['latency_ns'] = latency_ns
+                    result_file['samples_ps'] = samples_ps
                     data.append(result_file)
     
     df = pd.DataFrame(data)  
     return df  
 
 def parse_results(file_path):
-    latency_ns = 0
-
+    sps = 0
+    latency = 0
     try:  
         with open(file_path, 'r', errors="ignore") as log_file:  
+            results = {}
             for line in log_file:
+                if 'Samples per second' in line or 'Completed samples per second' in line:
+                    sps = int(float(line.split(':')[1].strip()))
+
                 if 'Mean latency (ns)' in line:
-                    latency_ns = line.split(':')[1].strip()
+                    latency = float(line.split(':')[1].strip()) / 1e+11
                     break
                     
     except Exception as e:  
         print(f"Error reading {file_path}: {e}")  
 
-    return latency_ns
+    return sps, latency
 
 def cleanse_data_set(systems_df, results_df):
     print("Cleaning and combining data")
@@ -80,9 +90,7 @@ def cleanse_data_set(systems_df, results_df):
 
     joined_df = systems_df.join(results_df.set_index('system'), on='system')
 
-    joined_df = joined_df.query(f"division == 'Server' & model == 'resnet50'")
-
-    joined_df['latency_ns'] = joined_df['latency_ns'].astype('Int32')
+    joined_df = joined_df.query(f"division == 'Server' & model == 'bert-99'")
 
     joined_df = joined_df.drop(columns=['system', 'model', 'division'])
 
@@ -91,17 +99,28 @@ def cleanse_data_set(systems_df, results_df):
 
 def run_rf(df):
     print("Running random forest model")
-    X = df.drop('latency_ns', axis=1)
-    y = df['latency_ns'] 
-    encoder = OneHotEncoder(drop_invariant=True) 
-    #X_encoded = encoder.fit_transform(X) 
-    X_encoded = pd.get_dummies(X, drop_first=True)  
+
+    X = df.drop('samples_ps', axis=1)
+    y = df['samples_ps'] 
+
+    encoder = TargetEncoder(X.columns)
+    X_encoded = encoder.fit_transform(X, y) 
 
     X_train, X_test, y_train, y_test = train_test_split(X_encoded, y, test_size=0.2, random_state=42)  
   
     model = RandomForestClassifier(n_estimators=100, random_state=42)  
     model.fit(X_train, y_train)  
+
+    y_pred = model.predict(X_test)
+
+    # RMSE (Root Mean Square Error)
+    rmse = float(format(np.sqrt(mean_squared_error(y_test, y_pred)), '.3f'))
+    print("\nRMSE: ", rmse)
     
+    print(accuracy_score(y_test, y_pred))
+
+    #print(confusion_matrix(y_test, y_pred))
+
     importances = model.feature_importances_  
     feature_names = X_encoded.columns  
     
@@ -112,10 +131,17 @@ def run_rf(df):
 systems_df = traverse_systems(data_dir)  
 results_df = traverse_results(data_dir)  
 
-cleaned_df = cleanse_data_set(systems_df, results_df)
-importance_df = run_rf(cleaned_df)
 
-systems_df.to_csv('results/inference-sytems-data.csv')
-importance_df.to_csv('results/inference-importance.csv')
 
-# print(importance_df)  
+analysis_df = cleanse_data_set(systems_df, results_df)
+
+results_df.to_csv('results/inference-results.csv')
+systems_df.to_csv('results/hardware-data.csv')
+analysis_df.to_csv('results/training-set.csv')
+
+
+sps = analysis_df['samples_ps']
+print(sps.describe())
+
+importance_df = run_rf(analysis_df)
+importance_df.to_csv('results/training-importance.csv')

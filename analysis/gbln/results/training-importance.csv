@@ -1,0 +1,12 @@
+,Feature,Importance
+10,avg_mem_usage,0.15075191655077558
+2,avg_gpu_mem_usage,0.1152844422346377
+9,latency_m,0.11210880184960698
+3,accelerator_memory_capacity,0.09686206721620624
+8,operating_system,0.08975807991774368
+1,avg_gpu_usage,0.08354306553744496
+7,host_processor_model_name,0.07810681467318799
+0,avg_cpu_usage,0.07508242930778444
+5,host_memory_capacity,0.07487009611461343
+4,accelerator_model_name,0.06543065181510159
+6,host_processor_core_count,0.0582016347828975

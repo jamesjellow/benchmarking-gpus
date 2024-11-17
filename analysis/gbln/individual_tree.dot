@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="latency_m <= 6.98\ngini = 0.834\nsamples = 25\nvalue = [8, 2, 6, 7, 0, 5, 2, 1, 3]\nclass = 115", fillcolor="#fefaf8"] ;
+1 [label="host_memory_capacity <= 22.5\ngini = 0.811\nsamples = 18\nvalue = [0, 2, 6, 7, 0, 5, 2, 1, 3]\nclass = 117", fillcolor="#f5fef9"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="host_processor_core_count <= 43.669\ngini = 0.346\nsamples = 7\nvalue = [0, 2, 0, 7, 0, 0, 0, 0, 0]\nclass = 117", fillcolor="#72eca5"] ;
+1 -> 2 ;
+3 [label="gini = 0.0\nsamples = 2\nvalue = [0, 2, 0, 0, 0, 0, 0, 0, 0]\nclass = 115", fillcolor="#d7e539"] ;
+2 -> 3 ;
+4 [label="gini = 0.0\nsamples = 5\nvalue = [0, 0, 0, 7, 0, 0, 0, 0, 0]\nclass = 117", fillcolor="#39e581"] ;
+2 -> 4 ;
+5 [label="accelerator_model_name <= 48.115\ngini = 0.74\nsamples = 11\nvalue = [0, 0, 6, 0, 0, 5, 2, 1, 3]\nclass = 114", fillcolor="#f2fdee"] ;
+1 -> 5 ;
+6 [label="gini = 0.0\nsamples = 3\nvalue = [0, 0, 6, 0, 0, 0, 0, 0, 0]\nclass = 114", fillcolor="#64e539"] ;
+5 -> 6 ;
+7 [label="host_processor_core_count <= 57.743\ngini = 0.678\nsamples = 8\nvalue = [0, 0, 0, 0, 0, 5, 2, 1, 3]\nclass = 123", fillcolor="#ced8f8"] ;
+5 -> 7 ;
+8 [label="gini = 0.0\nsamples = 5\nvalue = [0, 0, 0, 0, 0, 5, 0, 0, 0]\nclass = 123", fillcolor="#3964e5"] ;
+7 -> 8 ;
+9 [label="avg_mem_usage <= 0.214\ngini = 0.611\nsamples = 3\nvalue = [0, 0, 0, 0, 0, 0, 2, 1, 3]\nclass = 115", fillcolor="#f8ced8"] ;
+7 -> 9 ;
+10 [label="avg_gpu_usage <= 40.81\ngini = 0.375\nsamples = 2\nvalue = [0, 0, 0, 0, 0, 0, 0, 1, 3]\nclass = 115", fillcolor="#ee7b98"] ;
+9 -> 10 ;
+11 [label="gini = 0.0\nsamples = 1\nvalue = [0, 0, 0, 0, 0, 0, 0, 1, 0]\nclass = 115", fillcolor="#e539d7"] ;
+10 -> 11 ;
+12 [label="gini = 0.0\nsamples = 1\nvalue = [0, 0, 0, 0, 0, 0, 0, 0, 3]\nclass = 115", fillcolor="#e53964"] ;
+10 -> 12 ;
+13 [label="gini = 0.0\nsamples = 1\nvalue = [0, 0, 0, 0, 0, 0, 2, 0, 0]\nclass = 115", fillcolor="#8139e5"] ;
+9 -> 13 ;
+14 [label="gini = 0.0\nsamples = 7\nvalue = [8, 0, 0, 0, 0, 0, 0, 0, 0]\nclass = 115", fillcolor="#e58139"] ;
+0 -> 14 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
