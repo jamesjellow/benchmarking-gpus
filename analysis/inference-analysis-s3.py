@@ -9,6 +9,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeRegressor  
 from sklearn.metrics import accuracy_score, mean_squared_error, confusion_matrix
 
+from category_encoders import TargetEncoder
+
 s3_client = boto3.client('s3', 
     aws_access_key_id='************************', 
     aws_secret_access_key='*****************************', 
@@ -61,7 +63,8 @@ def run_dtr(df):
     X = df.drop('samples_ps', axis=1)
     y = df['samples_ps'] 
 
-    X_encoded = pd.get_dummies(X, drop_first=True)  
+    encoder = TargetEncoder(X.columns)
+    X_encoded = encoder.fit_transform(X, y) 
 
     X_train, X_test, y_train, y_test = train_test_split(X_encoded, y, test_size=0.2, random_state=42)  
   
@@ -87,13 +90,12 @@ def run_rf(df):
     X = df.drop('samples_ps', axis=1)
     y = df['samples_ps'] 
 
-    #X_encoded = encoder.fit_transform(X) 
-    X_encoded = pd.get_dummies(X, drop_first=True)  
+    encoder = TargetEncoder(X.columns)
+    X_encoded = encoder.fit_transform(X, y) 
 
     X_train, X_test, y_train, y_test = train_test_split(X_encoded, y, test_size=0.2, random_state=42)  
   
     model = RandomForestClassifier(n_estimators=100, random_state=42)  
-    #model = DecisionTreeRegressor(random_state = 0)  
     model.fit(X_train, y_train)  
 
     y_pred = model.predict(X_test)
