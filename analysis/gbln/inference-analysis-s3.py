@@ -64,8 +64,6 @@ def run_dtr(df):
     X = df.drop('samples_ps', axis=1)
     y = df['samples_ps'] 
 
-    #print(y.value_counts())
-
     encoder = TargetEncoder(X.columns)
     X_encoded = encoder.fit_transform(X, y) 
 
