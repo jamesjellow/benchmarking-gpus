@@ -1,5 +1,4 @@
 export interface FeatureImportance {
-  id: number;
-  feature: string;
-  importance: number;
+	name: string;
+	importance: number;
 }

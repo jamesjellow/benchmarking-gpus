@@ -1,9 +1,49 @@
-import { Container, Typography, Box, Button } from '@mui/material';
-import { BarChart2, BarChart3, BarChart4, Github } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import {
+	Container,
+	Typography,
+	Box,
+	Button,
+	CircularProgress,
+} from '@mui/material';
+import { BarChart2, Github } from 'lucide-react';
 import { FeatureTable } from './components/FeatureTable';
-import { featureData } from './data/featureData';
 
-function App() {
+const App = () => {
+	const [featureData, setFeatureData] = useState([]);
+	const [loading, setLoading] = useState(true);
+
+	const fetchData = () => {
+		setLoading(true);
+		const apiUrl = 'https://api.gpu-bench.com/v1/features';
+
+		axios
+			.get(apiUrl)
+			.then((response) => {
+				setFeatureData(response.data);
+			})
+			.catch((error) => {
+				console.error('Error fetching data:', error);
+			})
+			.finally(() => {
+				setLoading(false);
+			});
+	};
+
+	useEffect(() => {
+		// Fetch data on component mount
+		fetchData();
+
+		// Set interval to refetch data every 30 minutes (1800000 ms)
+		const intervalId = setInterval(() => {
+			fetchData();
+		}, 1800000);
+
+		// Clear interval on component unmount
+		return () => clearInterval(intervalId);
+	}, []);
+
 	return (
 		<Container
 			maxWidth={false}
@@ -49,7 +89,20 @@ function App() {
 				</Typography>
 			</Box>
 
-			<FeatureTable data={featureData} />
+			{loading ? (
+				<Box
+					sx={{
+						display: 'flex',
+						justifyContent: 'center',
+						alignItems: 'center',
+						height: '200px',
+					}}
+				>
+					<CircularProgress />
+				</Box>
+			) : (
+				<FeatureTable data={featureData} />
+			)}
 
 			<Button
 				variant="contained"
@@ -72,6 +125,6 @@ function App() {
 			</Button>
 		</Container>
 	);
-}
+};
 
 export default App;
