@@ -1,5 +1,5 @@
 import { Container, Typography, Box, Button } from '@mui/material';
-import { BarChart2, Github } from 'lucide-react';
+import { BarChart2, BarChart3, BarChart4, Github } from 'lucide-react';
 import { FeatureTable } from './components/FeatureTable';
 import { featureData } from './data/featureData';
 
