@@ -7,8 +7,9 @@ import {
 	Button,
 	CircularProgress,
 } from '@mui/material';
-import { BarChart2, Github } from 'lucide-react';
+import { Github } from 'lucide-react';
 import { FeatureTable } from './components/FeatureTable';
+import AnimatedBarChart from './components/AnimatedBartChart';
 
 const App = () => {
 	const [featureData, setFeatureData] = useState([]);
@@ -66,8 +67,18 @@ const App = () => {
 				}}
 			>
 				<Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-					<BarChart2 size={32} />
-					<Typography variant="h4" component="h1" fontWeight="bold">
+					<AnimatedBarChart size={50} color="#8A2BE2" />
+					<Typography
+						variant="h4"
+						component="h1"
+						fontWeight="bold"
+						sx={{
+							background: 'linear-gradient(to right, #8A2BE2, #00BFFF)',
+							WebkitBackgroundClip: 'text',
+							WebkitTextFillColor: 'transparent',
+							// Add optional shine effect by changing angle or colors if desired
+						}}
+					>
 						GPU Feature Importance
 					</Typography>
 				</Box>
