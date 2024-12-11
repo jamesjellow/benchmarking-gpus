@@ -13,9 +13,9 @@ from sklearn.metrics import accuracy_score, mean_squared_error, confusion_matrix
 from category_encoders import TargetEncoder
 
 s3_client = boto3.client('s3', 
-    aws_access_key_id='***********************', 
-    aws_secret_access_key='****************************', 
-    region_name='us-east-2'
+    aws_access_key_id='*****', 
+    aws_secret_access_key='*****', 
+    region_name='us-east-1'
     )
 
 bucket_name = 'benchmarking-gpus'
@@ -166,19 +166,20 @@ hardware_df.to_csv('results/hardware-data.csv')
 gpu_df = pd.read_csv('gpu-data.csv')  
 gpu_df = gpu_df.drop(columns=['accelerator_model_name'])
 
-#hardware_df = hardware_df.join(gpu_df.set_index('system_name'), on='system_name')
+hardware_df = hardware_df.join(gpu_df.set_index('system_name'), on='system_name')
 hardware_df = hardware_df.drop(columns=['host_processors_per_node', 'host_storage_type', 'submitter', 'division', 'submitter', 'division', 'status', 'number_of_nodes', 'host_processor_frequency', 'host_processor_caches', 'host_processor_interconnect', 'host_storage_capacity', 'host_networking', 'host_networking_topology', 'host_memory_configuration', 'accelerator_host_interconnect', 'accelerator_frequency', 'accelerator_on-chip_memories', 'accelerator_interconnect_topology', 'cooling', 'hw_notes', 'other_software_stack', 'sw_notes', 'host_network_card_count', 'accelerator_interconnect', 'accelerator_memory_configuration', 'accelerators_per_node', 'framework', 'system_name', 'system_type', 'system_type_detail'])
 
 analysis_df = metrics_df.join(hardware_df.set_index('row_key'), on='row_key')
-analysis_df = analysis_df.join(results_df.set_index('row_key'), on='row_key')
+# analysis_df = analysis_df.join(results_df.set_index('row_key'), on='row_key')
+
+analysis_df = hardware_df.join(results_df.set_index('row_key'), on='row_key')
 
 analysis_df['avg_mem_usage'] = 1 - (analysis_df['avg_free_mem'] / analysis_df['host_memory_capacity'])
 
-analysis_df = analysis_df.drop(columns=['row_key', 'avg_free_mem'])
+analysis_df = analysis_df.drop(columns=['row_key', 'latency_m'])
 
 #filtering out potential erroneos result
 analysis_df = analysis_df.query("samples_ps < 200")
-
 
 importance_df = run_rf(analysis_df)
 importance_df.to_csv('results/training-importance.csv')
@@ -187,3 +188,4 @@ sps = analysis_df['samples_ps']
 print(sps.describe())
 
 analysis_df.to_csv('results/training-set.csv')
+analysis_df.to_json('results/training-set.json', orient='records')
