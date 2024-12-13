@@ -117,7 +117,7 @@ const App = () => {
 
 			<Button
 				variant="contained"
-				href="https://github.com/jamesjellow/benchmarking-gpus/tree/main"
+				href="https://github.com/jamesjellow/benchmarking-gpus/tree/main/inference/bert99"
 				target="_blank"
 				rel="noopener noreferrer"
 				startIcon={<Github size={20} />}
