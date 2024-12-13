@@ -18,7 +18,7 @@ interface FeatureTableProps {
 }
 
 export const FeatureTable: React.FC<FeatureTableProps> = ({ data }) => {
-	const maxImportance = Math.max(...data.map((item) => item.importance));
+	const maxImportance = Math.max(...data.map((item) => item.Importance));
 
 	return (
 		<TableContainer
@@ -39,19 +39,19 @@ export const FeatureTable: React.FC<FeatureTableProps> = ({ data }) => {
 				<TableBody>
 					{data.map((item) => (
 						<TableRow
-							key={item.name}
+							key={item.Feature}
 							sx={{ '&:hover': { backgroundColor: '#f8f9fa' } }}
 						>
 							<TableCell>
 								<Typography variant="body2" sx={{ fontFamily: 'monospace' }}>
-									{item.name}
+									{item.Feature}
 								</Typography>
 							</TableCell>
 							<TableCell>
 								<Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
 									<LinearProgress
 										variant="determinate"
-										value={(item.importance / maxImportance) * 100}
+										value={(item.Importance / maxImportance) * 100}
 										sx={{
 											width: '100%',
 											height: 8,
@@ -64,7 +64,7 @@ export const FeatureTable: React.FC<FeatureTableProps> = ({ data }) => {
 										}}
 									/>
 									<Typography variant="body2" sx={{ minWidth: '45px' }}>
-										{item.importance}%
+										{Math.floor(item.Importance * 100)}%
 									</Typography>
 								</Box>
 							</TableCell>

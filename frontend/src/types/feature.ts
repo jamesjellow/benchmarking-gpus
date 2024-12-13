@@ -1,4 +1,6 @@
 export interface FeatureImportance {
-	name: string;
-	importance: number;
+	Feature: string;
+	Importance: number;
+	inference_analysis_id: string;
+	id: string;
 }

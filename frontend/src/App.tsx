@@ -13,11 +13,11 @@ import AnimatedBarChart from './components/AnimatedBartChart';
 
 const App = () => {
 	const [featureData, setFeatureData] = useState([]);
-	const [loading, setLoading] = useState(true);
+	const [loading, setLoading] = useState(false);
 
 	const fetchData = () => {
 		setLoading(true);
-		const apiUrl = 'https://api.gpu-bench.com/v1/features';
+		const apiUrl = 'https://api.gpu-bench.com/v2/features';
 
 		axios
 			.get(apiUrl)
