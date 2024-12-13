@@ -96,7 +96,7 @@ const App = () => {
 						mb: 3,
 					}}
 				>
-					⚡ This analysis updates every 30 minutes
+					⚡ This page updates every 30 minutes
 				</Typography>
 			</Box>
 
