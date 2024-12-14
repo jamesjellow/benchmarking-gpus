@@ -13,11 +13,11 @@ import AnimatedBarChart from './components/AnimatedBartChart';
 
 const App = () => {
 	const [featureData, setFeatureData] = useState([]);
-	const [loading, setLoading] = useState(true);
+	const [loading, setLoading] = useState(false);
 
 	const fetchData = () => {
 		setLoading(true);
-		const apiUrl = 'https://api.gpu-bench.com/v1/features';
+		const apiUrl = 'https://api.gpu-bench.com/v2/features';
 
 		axios
 			.get(apiUrl)
@@ -96,7 +96,7 @@ const App = () => {
 						mb: 3,
 					}}
 				>
-					⚡ This analysis updates every 30 minutes
+					⚡ This page updates every 30 minutes
 				</Typography>
 			</Box>
 
@@ -117,7 +117,7 @@ const App = () => {
 
 			<Button
 				variant="contained"
-				href="https://github.com/jamesjellow/benchmarking-gpus/tree/main"
+				href="https://github.com/jamesjellow/benchmarking-gpus/tree/main/inference/bert99"
 				target="_blank"
 				rel="noopener noreferrer"
 				startIcon={<Github size={20} />}

@@ -62,7 +62,7 @@ for i in {1..9}; do
 done
 ```
 
-10. Grab your linux aws credentials from https://uillinoisedu.sharepoint.com/:t:/s/CS598ResearchGroup79/EeGvJadKOgFBov5_1lE8AfQBDRLlrbJpzwLi6Kyxl3oudg?e=oL85da . Then run the `sh submit-results.sh` script to submit your results.
+10. Run the `sh submit-results.sh` script to submit your results.
 ```sh
 ./submit-results.sh
 ```
